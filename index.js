@@ -8,7 +8,7 @@ class SassLintWebpackPlugin {
 
   apply(compiler) {
     compiler.hooks.compilation.tap('SassLintWebpackPlugin', (compilation) => {
-      if (compilation.name) { return }
+      // if (compilation.name) { return }
 
       compilation.hooks.seal.tap('SassLintWebpackPlugin', () => {
         const { files, options = {}, configPath } = this.options
